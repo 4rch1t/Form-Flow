@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormFlow - Typeform Clone</title>
+    <link rel="stylesheet" href="modern-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-poll-h"></i>
+                <h2>FormFlow</h2>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="nav-link active"><i class="fas fa-edit"></i> Form Builder</a>
+                <a href="/dashboard" class="nav-link"><i class="fas fa-chart-bar"></i> Dashboard</a>
+            </div>
+            <div class="form-list">
+                <h3>Your Forms</h3>
+                <ul id="forms-list">
+                    <!-- Forms will be listed here -->
+                </ul>
+                <button id="new-form-btn" class="primary-btn">Create New Form</button>
+            </div>
+            <div class="user-section">
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <span id="user-name">User</span>
+                </div>
+                <button id="logout-btn" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="form-builder" id="form-builder">
+                <div class="form-header">
+                    <input type="text" id="form-title" placeholder="Untitled Form" class="form-title-input">
+                    <div class="form-actions">
+                        <button id="save-form-btn" class="action-btn"><i class="fas fa-save"></i> Save</button>
+                        <button id="preview-form-btn" class="action-btn"><i class="fas fa-eye"></i> Preview</button>
+                        <button id="share-form-btn" class="action-btn"><i class="fas fa-share-alt"></i> Share</button>
+                    </div>
+                </div>
+                <div class="form-questions" id="form-questions">
+                    <!-- Questions will be added here -->
+                </div>
+                <div class="add-question">
+                    <button id="add-question-btn" class="secondary-btn">Add Question</button>
+                </div>
+            </div>
+            <div class="question-types-panel" id="question-types-panel" style="display: none;">
+                <h3>Question Types</h3>
+                <div class="question-type" data-type="short-text">
+                    <i class="fas fa-font"></i>
+                    <span>Short Text</span>
+                </div>
+                <div class="question-type" data-type="long-text">
+                    <i class="fas fa-align-left"></i>
+                    <span>Long Text</span>
+                </div>
+                <div class="question-type" data-type="multiple-choice">
+                    <i class="fas fa-list-ul"></i>
+                    <span>Multiple Choice</span>
+                </div>
+                <div class="question-type" data-type="yes-no">
+                    <i class="fas fa-toggle-on"></i>
+                    <span>Yes/No</span>
+                </div>
+                <div class="question-type" data-type="rating">
+                    <i class="fas fa-star"></i>
+                    <span>Rating</span>
+                </div>
+                <div class="question-type" data-type="date">
+                    <i class="fas fa-calendar"></i>
+                    <span>Date</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div class="preview-modal" id="preview-modal">
+        <div class="preview-content">
+            <div class="preview-header">
+                <h2>Form Preview</h2>
+                <button id="close-preview-btn" class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="preview-form" id="preview-form">
+                <!-- Preview content will be generated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div class="modal" id="share-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Share Form</h2>
+                <button id="close-share-btn" class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>Share this link with others to let them fill out your form:</p>
+                <div class="share-link-container">
+                    <input type="text" id="share-link" readonly>
+                    <button id="copy-link-btn"><i class="fas fa-copy"></i></button>
+                </div>
+                <div class="copy-success" id="copy-success">Link copied to clipboard!</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

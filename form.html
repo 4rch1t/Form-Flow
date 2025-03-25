@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="modern-styles.css">
+    <link rel="stylesheet" href="form-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1 id="form-title">Loading form...</h1>
+        </div>
+        
+        <div class="form-content" id="form-content">
+            <!-- Form questions will be loaded here -->
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading form...</p>
+            </div>
+        </div>
+        
+        <div class="form-footer">
+            <button id="submit-form-btn" class="submit-btn">Submit</button>
+        </div>
+    </div>
+    
+    <div class="success-message" id="success-message">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <h2>Thank you!</h2>
+            <p>Your response has been submitted successfully.</p>
+            <button id="close-success-btn" class="close-btn">Close</button>
+        </div>
+    </div>
+    
+    <script src="form-script.js"></script>
+</body>
+</html>
