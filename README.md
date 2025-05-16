@@ -82,7 +82,7 @@ npm run dev
 - CSS3
 - JavaScript (ES6+)
 - Node.js
-- Express
+- React
 
 ## Project Structure
 
